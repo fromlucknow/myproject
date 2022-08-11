@@ -8,7 +8,7 @@
 import UIKit
 
 class FruitTableViewCell: UITableViewCell {
-
+    // MARK: - Variable
     @IBOutlet weak var fruitName: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

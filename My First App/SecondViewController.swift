@@ -9,9 +9,10 @@ import UIKit
 
 class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
-    
+    // MARK: - Variables
     let fruitArray = ["Apple", "Orange","Mango","Banana","Papaya", "Apple","Grapes","Pineapple"]
     
+    // MARK: - Outlets
     @IBOutlet weak var fruitsTableView: UITableView!
      
     override func viewDidLoad() {
@@ -22,6 +23,8 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         fruitsTableView.register(UINib(nibName: "FruitTableViewCell", bundle: nil), forCellReuseIdentifier: "myCell")
         
     }
+    
+    // MARK: - TableView Delegates
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fruitArray.count
@@ -34,14 +37,6 @@ class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell
         
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
